@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//Import this one ^ to access bootstrap, read react bootstrap documentation
+
+const name = 'John Smith';
+const element = <h1>Hello, {name}</h1>
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
+  //You can erase this <React.StrictMode> to <> </> (React Fragments)
+ /* 
+ <React.StrictMode>
+    {element}
+    <h1>Hello, {name}</h1>
+    <h3>Full Stack Developer</h3>
+    <h4>Welcome to my page</h4>
   </React.StrictMode>
+ */
+  <>
+    <App />
+  </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
